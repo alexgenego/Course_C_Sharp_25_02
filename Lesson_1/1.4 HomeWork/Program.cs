@@ -4,15 +4,24 @@
 int a = int.Parse(Console.ReadLine()!);
 int b = int.Parse(Console.ReadLine()!);
 
-int max = a
 
-if (b > max)
+if (b > a)
 {
-    Console.WriteLine(a "min");
-    Console.WriteLine(b "max");
+    Console.Write("min = ");
+    Console.WriteLine(a);
+    Console.Write("max = ");
+    Console.WriteLine(b);
+}
+else if (a == b)
+{
+    Console.Write(a);
+    Console.Write(" = ");
+    Console.WriteLine(b);
 }
 else
 {
-    Console.WriteLine(a "max");
-    Console.WriteLine(b "min");
+    Console.Write("min = ");
+    Console.WriteLine(b);
+    Console.Write("max = ");
+    Console.WriteLine(a);
 }
