@@ -10,14 +10,19 @@ int TakeNum(int num)
         
         else
             //(num = (num / 100));
-            while ((num /100) / 10 > 0)
-            {
-                num = (num / 100) % 10;
-            }
+            for (int index = 0; index <7; index++)
+                {
+                num = num / 10;
+                                
+                if ((num /10) <= 100)
+                    {
+                        break;
+                    }
+                }
         
     }    
-return (num);
+return (num % 10);
 }
-int result = TakeNum(new Random().Next(0, 1000000));
+int result = TakeNum(new Random().Next(0, 10000000));
 Console.WriteLine(result);
 
