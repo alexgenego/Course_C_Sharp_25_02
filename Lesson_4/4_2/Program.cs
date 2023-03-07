@@ -3,7 +3,7 @@
 
 
 
-int protectnomber(int num)
+int protectnumber(int num)
 {
     int all_pr = 1;
     for (int i = 1; i <= num; i++)
@@ -11,5 +11,5 @@ int protectnomber(int num)
     return all_pr;
 }
 int A = int.Parse(Console.ReadLine()!);
-int result = protectnomber(A);
+int result = protectnumber(A);
 Console.WriteLine(result);
