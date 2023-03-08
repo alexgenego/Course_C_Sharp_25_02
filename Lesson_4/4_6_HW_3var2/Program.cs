@@ -19,14 +19,15 @@ void PrintArray(int[] array, int lenght)
 {
     //Console.WriteLine(array.ToString());
     string[] arr = new string[lenght];
-    for (int i=0; i<lenght; i++){}
-    //{
-    //Console.WriteLine(array[i].ToString());
+    for (int i=0; i<lenght; i++)
+    {
+    Console.Write($"{array[i].ToString()}");
     //Console.WriteLine(array);
-    //}
-    Console.WriteLine(string.Join(",", array));
+    }
+    //Console.WriteLine(string.Join(",", array));
 }
 Massiv(int.Parse(Console.ReadLine()!));
 //Massiv(8);
+
 
 
