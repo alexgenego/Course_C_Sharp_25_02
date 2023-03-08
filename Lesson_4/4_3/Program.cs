@@ -2,13 +2,13 @@
 //    заполненный нулями и единицами в случайном порядке.
 
 
-void Massiv(int leght)
+void Massiv(int lenght)
 {
-    int[] R = new int[leght];
-    for (int i=0; i<leght; i++)
+    int[] arR = new int[lenght];
+    for (int i=0; i<lenght; i++)
     {
-        R[i] = new Random().Next(2);
-        Console.Write(R[i]);
+        arR[i] = new Random().Next(2);
+        Console.Write(arR[i]);
     }
 }
 
