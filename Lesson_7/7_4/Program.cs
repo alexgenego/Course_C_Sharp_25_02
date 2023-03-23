@@ -26,26 +26,29 @@ int[,] MassNums(int row, int column, int from, int to)
     return arr;
 }
 
-string Example (int [,] array, int num)
+string OccurrenceElement(int[,] arr, int num)
 {
-  for (int i = 0; i < array.GetLength(0); i++)
-  {
-    for (int j = 0; j < array.GetLength(1); j ++)
-    {
-      if (array [i,j] == num) 
-      return $"{i+1} {j+1}";
-    }
-  }
-  return "Нет";
+    int row = arr.GetLength(0);
+    int column = arr.GetLength(1);
+    
+    for (int i = 0; i < row; i++)    
+        for (int j = 0; j < column; j++)        
+            if (arr[i, j] == num) return $"[{i + 1}, {j + 1}]";
+
+    return "no";       
 }
 
-int num_row = int.Parse(Console.ReadLine()!);
-int num_column = int.Parse(Console.ReadLine()!);
+Console.Write("Enter the number of rows: ");
+int row_num = int.Parse(Console.ReadLine()!);
+Console.Write("Enter the number of columns: ");
+int column_num = int.Parse(Console.ReadLine()!);
 int start = int.Parse(Console.ReadLine()!);
 int stop = int.Parse(Console.ReadLine()!);
 
-int[,] mass = MassNums(num_row, num_column, start, stop);
+int[,] mass = MassNums(row_num, column_num, start, stop);
 Print(mass);
-int num = int.Parse(Console.ReadLine()!);
-string summ = Example(mass, num);
-Console.WriteLine(summ);
+
+Console.Write("Enter a number to search for: ");
+int number = int.Parse(Console.ReadLine()!);
+
+Console.Write($"Element {number} located in the matrix - {OccurrenceElement(mass, number)}"); 
