@@ -28,9 +28,9 @@ double[,] MassNums(int row, int column)
 
 string meanColumn(double[,] arr, int num_row, int num_column)
 {
-
 double sum = 0;
 double mean = 0;
+
 for (int i = 0; i < num_row; i++)
     {
     for (int j = 0; j < num_column; j++)
@@ -39,13 +39,13 @@ for (int i = 0; i < num_row; i++)
                 mean = sum / num_row;
             }
             Console.WriteLine();
-            Console.WriteLine(mean.ToString("n2"));
+            Console.Write(mean.ToString("n2"));
             sum = 0;
             mean = 0;
             
     }
-    return "mean";
-
+    return mean .ToString();
+    //return mean;
 }
 
 Console.Write("Enter the number of rows: ");
