@@ -31,21 +31,20 @@ string meanColumn(double[,] arr, int num_row, int num_column)
 double sum = 0;
 double mean = 0;
 
-for (int i = 0; i < num_row; i++)
+for (int i = 0; i < num_column; i++)
     {
-    for (int j = 0; j < num_column; j++)
+    for (int j = 0; j < num_row; j++)
             {
                 sum += arr[j, i];
                 mean = sum / num_row;
             }
-            Console.WriteLine();
-            Console.Write(mean.ToString("n2"));
+            //Console.WriteLine();
+            Console.Write(mean.ToString("n2") + " ");
             sum = 0;
-            mean = 0;
+            //mean = 0;
             
     }
-    return mean .ToString();
-    //return mean;
+    return "ColumnSum";
 }
 
 Console.Write("Enter the number of rows: ");
