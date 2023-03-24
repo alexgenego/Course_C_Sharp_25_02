@@ -58,4 +58,4 @@ numRow -= 1;
 Console.Write("Enter a column index: ");
 int numCol = int.Parse(Console.ReadLine()!);
 numCol -= 1;
-Console.Write($"Element located in the matrix - {OccurrenceElement(mass, numRow, numCol, row_num, column_num)}"); 
+Console.Write($"{OccurrenceElement(mass, numRow, numCol, row_num, column_num)}"); 

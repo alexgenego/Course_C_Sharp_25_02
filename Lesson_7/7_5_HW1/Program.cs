@@ -14,7 +14,7 @@ void Print(double[,] arr)
     }
     Console.WriteLine();
 }
-//, double from, double to
+
 double[,] MassNums(int row, int column)
 {
     double[,] arr = new double[row, column];
@@ -26,11 +26,10 @@ double[,] MassNums(int row, int column)
     return arr;
 }
 
+Console.Write("Enter the number of rows: ");
 int num_row = int.Parse(Console.ReadLine()!);
+Console.Write("Enter the number of columns: ");
 int num_column = int.Parse(Console.ReadLine()!);
-// double start = double.Parse(Console.ReadLine()!);
-// double stop = double.Parse(Console.ReadLine()!);
-//double[,] mass = MassNums(num_row, num_column);
+
 double[,] arr = MassNums(num_row, num_column);
-// double[,] arr = MassNums(num_row, num_column, start, stop);
 Print(arr);
