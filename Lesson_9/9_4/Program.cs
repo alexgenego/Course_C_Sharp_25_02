@@ -4,8 +4,10 @@
 void ValuesSet(int M, int N)
 {
     if (N < M) return;
-    ValuesSet(M , N- 1);
-    Console.Write($"{N} ");
+        ValuesSet(M, N-1);
+        if ((N + 1) % 2 == 0) return;
+        Console.Write($"{N} ");
+    
 }
 
 int num1 = int.Parse(Console.ReadLine()!);
